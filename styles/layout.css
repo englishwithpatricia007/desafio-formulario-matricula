@@ -1,0 +1,39 @@
+#app {
+  display: grid;
+  grid-template-columns: 51.25% 48.75%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  overflow: auto;
+  /*barra de rolagem*/
+  padding: 4rem;
+
+  .main-container {
+    max-width: 33rem;
+    margin-left: auto;
+  }
+}
+
+/* Sim, o main está dentro de #app, mas no CSS Grid, os elementos filhos não herdam automaticamente a altura total do grid container, mesmo que o pai (#app) tenha height: 100vh.
+
+Por padrão, os itens do grid têm min-height: auto, o que pode causar problemas de overflow. Para que o overflow: auto; funcione corretamente em main, é necessário garantir que ele possa encolher e crescer dentro do grid. Por isso, usamos min-height: 0 no main (e no aside, se quiser):
+
+ */
+main,
+aside {
+  min-height: 0;
+}
+
+/* Assim, o main respeita o tamanho do grid e o overflow: auto; funciona como esperado.
+Se não definir isso, o conteúdo pode "vazar" e a barra de rolagem não aparecer. */
+
+aside {
+  background-color: var(--surface-secondary);
+  padding: 4rem;
+
+  .aside-container {
+    max-width: 31rem;
+  }
+}
