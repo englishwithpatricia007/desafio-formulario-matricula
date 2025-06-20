@@ -14,6 +14,19 @@ main {
     max-width: 33rem;
     margin-left: auto;
   }
+
+  .back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font: 600 1.5rem/1.25 var(--font-family);
+    margin-bottom: 0.5rem;
+  }
+
 }
 
 /* Sim, o main está dentro de #app, mas no CSS Grid, os elementos filhos não herdam automaticamente a altura total do grid container, mesmo que o pai (#app) tenha height: 100vh.
@@ -35,5 +48,21 @@ aside {
 
   .aside-container {
     max-width: 31rem;
+
+    img {
+      margin-top: 2rem;
+    }
+
+  }
+
+  h2 {
+    font: 600 2.5rem/1.25 var(--font-family);
+    margin-bottom: 0.5rem;
+
+    span {
+      color: var(--text-highlight);
+    }
+
+
   }
 }
