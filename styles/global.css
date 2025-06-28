@@ -61,7 +61,7 @@ img {
   height: auto;
 }
 
-/* @media (width <= 375px){
+/* @media (width <= 820px){
   :root {
     --text:    var(--fw-semi) var(--fs-base)/1.5 var(--ff-poppins);
     --text-md: var(--fw-semi) var(--fs-md)1.2 var(--ff-poppins);
@@ -70,7 +70,7 @@ img {
   }
 } */
 
-@media (max-width: 375px) {
+@media (max-width: 820px) {
   body {
     overflow: visible;
   }
