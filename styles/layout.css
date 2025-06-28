@@ -23,10 +23,9 @@ main {
   }
 
   h1 {
-    font: 600 1.5rem/1.25 var(--font-family);
+    font: 600 1.5rem/1.25 var(--ff-poppins);
     margin-bottom: 0.5rem;
   }
-
 }
 
 /* Sim, o main está dentro de #app, mas no CSS Grid, os elementos filhos não herdam automaticamente a altura total do grid container, mesmo que o pai (#app) tenha height: 100vh.
@@ -52,17 +51,56 @@ aside {
     img {
       margin-top: 2rem;
     }
-
   }
 
   h2 {
-    font: 600 2.5rem/1.25 var(--font-family);
+    font: 600 2.5rem/1.25 var(--ff-poppins);
     margin-bottom: 0.5rem;
 
     span {
       color: var(--text-highlight);
     }
-
-
   }
+}
+
+.aside-mobile {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
+@media (min-width: 80em) {
+  .desktop-only {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 375px) {
+  #app {
+    display: block  !important;
+    /* ou grid-template-columns: 1fr; se preferir manter grid */
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  main {
+    overflow: visible;
+    height: auto;      /* Permite crescer conforme o conteúdo */
+    width: 100%;
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .aside-mobile {
+    display: block;
+    background-color: var(--surface-secondary);
+    padding: 2rem 0 1.5rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .desktop-only {
+    display: none;
+  }
+
 }
