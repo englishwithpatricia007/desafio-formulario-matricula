@@ -77,7 +77,7 @@ aside {
   }
 }
 
-@media (max-width: 820px) {
+@media (min-width: 481px) and (max-width: 768px) {
   #app {
     display: block  !important;
     /* ou grid-template-columns: 1fr; se preferir manter grid */
