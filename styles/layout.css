@@ -51,6 +51,11 @@ aside {
       margin-top: 2rem;
     }
   }
+  .aside-container header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   h2 {
     font: 600 2.5rem/1.25 var(--ff-poppins);
@@ -68,12 +73,6 @@ aside {
 
 .desktop-only {
   display: block;
-}
-
-@media (min-width: 80em) {
-  .desktop-only {
-    display: inline-block;
-  }
 }
 
 @media (max-width: 768px ) {

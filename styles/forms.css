@@ -20,8 +20,28 @@ fieldset+fieldset {
   margin-top: 3rem;
 }
 
-actions-wrapper {
+.actions-wrapper {
   margin-top: 3rem;
   display: flex;
   gap: 1rem;
+  box-sizing: border-box;
+}
+
+.actions-wrapper button {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px ) {
+  .actions-wrapper {
+    margin-block: auto;
+    flex-direction: column;
+    gap: 1rem;
+  }
+   .actions-wrapper button {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
 }
